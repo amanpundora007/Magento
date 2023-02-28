@@ -1,0 +1,87 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+?>
+<div class="block newsletter">
+    <div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
+    <div class="content">
+    <h3>Subscribe us for latest updates</h3>
+        <form class="form subscribe"
+            novalidate
+            action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+            method="post"
+            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-validate-detail">
+            <div class="field newsletter">
+                <div class="control">
+                    <label for="newsletter">
+                        <span class="label">
+                            <?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?>
+                        </span>
+                        <input name="email" type="email" id="newsletter"
+                               placeholder="<?= $block->escapeHtml(__('Enter your email address')) ?>"
+                               data-mage-init='{"mage/trim-input":{}}'
+                               data-validate="{required:true, 'validate-email':true}"
+                        />
+                    </label>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="action subscribe primary"
+                        title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>"
+                        type="submit"
+                        aria-label="Subscribe">
+                    <span><?= $block->escapeHtml(__('Subscribe')) ?></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+        <a href="http://localhost:8095/"><img src="<?php echo $this->getViewFileUrl('images/logo2.png'); ?>" alt="Demo"></a>
+        
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam culpa sit enim nesciunt rerum laborum illum quam error ut alias!</p>
+            <div class="share">
+            <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fcampaign%2Flanding.php%3Fcampaign_id%3D14884913640%26extra_1%3Ds%257Cc%257C589460569849%257Cb%257Cfacebook%2B%2527%257C%26placement%26creative%3D589460569849%26keyword%3Dfacebook%2B%2527%26partner_id%3Dgooglesem%26extra_2%3Dcampaignid%253D14884913640%2526adgroupid%253D128696220912%2526matchtype%253Db%2526network%253Dg%2526source%253Dnotmobile%2526search_or_content%253Ds%2526device%253Dc%2526devicemodel%253D%2526adposition%253D%2526target%253D%2526targetid%253Dkwd-327195741349%2526loc_physical_ms%253D1007822%2526loc_interest_ms%253D%2526feeditemid%253D%2526param1%253D%2526param2%253D%26gclid%3DCjwKCAiAxvGfBhB-EiwAMPakqgbyLo2NHLi9D_b0QIT12NX4In08df0xZP0b52g7FFRyUf5HvyJ4lhoClGkQAvD_BwE"><img src="<?php echo $this->getViewFileUrl('images/icons8-facebook-50.png'); ?>" alt="Demo"></a>
+            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><img src="<?php echo $this->getViewFileUrl('images/icons8-twitter-50.png'); ?>" alt="Demo"></a>
+            <a href="https://www.instagram.com/"><img src="<?php echo $this->getViewFileUrl('images/icons8-instagram-50.png'); ?>" alt="Demo"></a>
+            <a href="https://in.linkedin.com/"><img src="<?php echo $this->getViewFileUrl('images/icons8-linkedin-circled-50.png'); ?>" alt="Demo"></a>
+            </div>
+        </div>
+        
+        <div class="box">
+            <h3>Our location</h3>
+            <div class="links">
+                <a href="https://www.google.com/maps/place/Saraswati+Vihar,+Pitam+Pura,+Delhi,+110034/@28.6964775,77.1225051,16z/data=!3m1!4b1!4m6!3m5!1s0x390d03c2cb7a1825:0xe0fc842d3ce33843!8m2!3d28.6964967!4d77.1250482!16s%2Fm%2F026c21y">India</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Quick links</h3>
+            <div class="links">
+                <a href="http://localhost:8095/">home</a>
+                <a href="http://localhost:8095/category.html">category</a>
+                <a href="http://localhost:8095/product.html">product</a>
+                <a href="http://localhost:8095/deal.html">deal</a>
+                <a href="">contact</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Download app</h3>
+            <div class="links">
+                <a href="https://play.google.com/store/games?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-in-1003227-med-hasem-py-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7CONSEM_kwid_43700065205026385_creativeid_535350509687_device_c&gclid=CjwKCAiAxvGfBhB-EiwAMPakqrc5sFs7l34LOSA53yGoOCulfqHi0ogsEZ_2KAOtpdCCoPHlr4FYLBoCoWEQAvD_BwE&gclsrc=aw.ds&pli=1">google play</a>
+                <a href="https://www.apple.com/in/app-store/">app store</a>
+            </div>
+        </div>
+
+    </div>
+</section>
